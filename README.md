@@ -1,4 +1,4 @@
-# [EMNLP'24 Findings | Tokenization Falling Short: The Curse of Tokenization](https://arxiv.org/abs/2406.11687)
+# [EMNLP'24 Findings | Tokenization Falling Short: On Subword Robustness in Large Language Models](https://arxiv.org/abs/2406.11687)
 
    <a href="https://huggingface.co/datasets/floatai" target="_blank">
       <img alt="Datasets" src="https://img.shields.io/badge/📚-Dataset-orange" />
@@ -7,7 +7,7 @@
   <a href="https://2024.emnlp.org/" target="_blank"> <img alt="EMNLP 2024" src="https://img.shields.io/badge/Proceedings-EMNLP2024(Findings)-red" /> </a>
 
 
-The official repository which contains the code and model checkpoints for our paper [Tokenization Falling Short: The Curse of Tokenization (Findings of EMNLP 2024)](https://arxiv.org/pdf/2406.11687).
+The official repository which contains the code and model checkpoints for our paper [Tokenization Falling Short: On Subword Robustness in Large Language Models (Findings of EMNLP 2024)](https://arxiv.org/pdf/2406.11687).
 
 
 ## 🔥 News
