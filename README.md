@@ -38,7 +38,7 @@ The official repository which contains the code and model checkpoints for our pa
   ```
 
 ## Evaluation
-### Research Question A: Complex Problem Solving
+### 1. Complex Problem Solving
   ```shell
   # evaluate and dump generation results to output/
   mkdir output/
@@ -64,8 +64,13 @@ The official repository which contains the code and model checkpoints for our pa
     --output_path output/identify_math_theorems.llama3-8b.json \
     --batch_size 64
   ```
+#### Results
+<div align = "center">
+<img src="./assets/complex_problem_solving.wu_cl.em_score.png" width="60%" style="vertical-align: middle"/>
+<br>
+</div>
 
-### Research Question B: Token Structure Probing
+### 2. Token Structure Probing
   ```shell
   # task value options: 
   # "multi_token_prob.common_substrings", 
@@ -84,9 +89,15 @@ The official repository which contains the code and model checkpoints for our pa
       --output_path output/${task}.llama3-8b.json \
       --batch_size 64
   ```
+#### Results
+<div align = "center">
+<!-- <img src="./assets/inter_token_probe.em_score.png" width="40%" style="vertical-align: middle"/> -->
+<img src="./assets/intra_token_probe.em_score.png" width="70%" style="vertical-align: middle"/>
+<br>
+</div>
 
-### Research Question C: Typographical Variation
-#### Character-level typographical variation
+### 3. Typographical Variation
+#### 3.1. Character-level typographical variation
 
 For **[MMLU](https://huggingface.co/datasets/cais/mmlu), [GSM8K](https://huggingface.co/datasets/openai/gsm8k), [TruthfulQA](https://huggingface.co/datasets/truthfulqa/truthful_qa)**, we utilize [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) for evaluation.
 ##### Step1: Setup
@@ -167,7 +178,7 @@ accelerate launch main.py \
 ```
 
 
-#### Token-level typographical variation
+#### 3.2. Token-level typographical variation
 **`Note`**: given a scrambled token sequence $s^\prime$, $s^\prime\neq$ tokenizer.encode(tokenizer.decode($s^\prime$)). 
 
 We modify the implementation of [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness) to support encoded input instead of strings. We release the modified version under `evaluation/`.
@@ -221,17 +232,6 @@ sed -i 's#DATASET_PATH =.*#DATASET_PATH = "'${download_dir}'/data.'${scramble_ty
 ##### Step3: Run Evalution
 Same as [char-level evaluation](#step3-run-evaluation-1).
 
-## [BPE-Dropout](https://aclanthology.org/2020.acl-main.170/) fine-tuning
-* [Training data](https://huggingface.co/datasets/FloatAI/TKEval/tree/main/token_structure_probing/train) we use for fine-tuning are designed for "Token Structure Probing". 
-* How to perform BPE-Dropout
-  ```python
-  from transformers import LlamaTokenizer
-
-  p = 0.0 # dropout-prob = [0.0, 0.2, 0.4, 0.6, 0.8]
-  sp_model_kwargs={'enable_sampling': True, 'alpha': p, 'nbest_size': -1}
-  tokenizer = LlamaTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1", sp_model_kwargs=sp_model_kwargs)
-  tokenizer.encode(...)
-  ```
 
 ## Citation
 ```bibtex
