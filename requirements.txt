@@ -1,0 +1,6 @@
+transformers
+torch
+accelerate
+scipy
+tqdm
+hashlib
