@@ -17,12 +17,11 @@ The official repository which contains the code and model checkpoints for our pa
 ## Contents
 - [Data Preparation](#data-preparation)
 - [Evaluation](#evaluation)
-  - [Complex Problem Solving](#research-question-a-complex-problem-solving)
-  - [Token Structure Probing](#research-question-b-token-structure-probing)
-  - [Typographical Variation](#research-question-c-typographical-variation)
-    - [char-level](#character-level-typographical-variation)
-    - [token-level](#token-level-typographical-variation)
-- [BPE-Dropout Fine-tuning](#bpe-dropout-fine-tuning)
+  - [Complex Problem Solving](#1-complex-problem-solving)
+  - [Token Structure Probing](#2-token-structure-probing)
+  - [Typographical Variation](#3-typographical-variation)
+    - [char-level](#31-character-level-typographical-variation)
+    - [token-level](#32-token-level-typographical-variation)
 
 ## Data Preparation
   ```shell
