@@ -168,7 +168,7 @@ accelerate launch main.py \
 
 
 #### Token-level typographical variation
-**`Note`**: given a scrambled token sequence $ s^\prime $, $ s^\prime \neq$ tokenizer.encode(tokenizer.decode($s^\prime$)). 
+**`Note`**: given a scrambled token sequence $s^\prime$, $s^\prime\neq$ tokenizer.encode(tokenizer.decode($s^\prime$)). 
 
 We modify the implementation of [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness) to support encoded input instead of strings. We release the modified version under `evaluation/`.
 
