@@ -11,6 +11,7 @@ The official repository which contains the code and model checkpoints for our pa
 
 
 ## 🔥 News
+* **11 December, 2024:** 🚀 We release [TKEval dataset](https://huggingface.co/datasets/FloatAI/TKEval) and evalution code.
 * **21 September, 2024:** 🎉 Our work has been accepted to [EMNLP 2024 (Findings)](https://2024.emnlp.org/)! ⭐
 
 ## Contents
@@ -95,7 +96,7 @@ cd lm-evaluation-harness
 pip install -e .
 ```
 
-##### Step2: Replace data-path with tkeval
+##### Step2: Replace data-path with TKEval
 ```shell
 download_dir="./data/"
 ngram=3 # [2, 3, 5]
@@ -136,7 +137,7 @@ git clone https://github.com/bigcode-project/bigcode-evaluation-harness.git
 cd bigcode-evaluation-harness
 pip install -e .
 ```
-##### Step2: Replace data-path with tkeval
+##### Step2: Replace data-path with TKEval
 ```shell
 download_dir="./data/"
 ngram=3 # [2, 3, 5]
@@ -169,7 +170,7 @@ accelerate launch main.py \
 #### Token-level typographical variation
 **`Note`**: given a scrambled token sequence $ s^\prime $, $ s^\prime \neq$ tokenizer.encode(tokenizer.decode($s^\prime$)). 
 
-We modify the implementation of [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness) to support encoded input instead of strings. We release the modified version under evaluation/.
+We modify the implementation of [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness) to support encoded input instead of strings. We release the modified version under `evaluation/`.
 
 For **[MMLU](https://huggingface.co/datasets/cais/mmlu), [GSM8K](https://huggingface.co/datasets/openai/gsm8k), [TruthfulQA](https://huggingface.co/datasets/truthfulqa/truthful_qa)**, you can reproduce the results following the instructions below.
 ##### Step1: Setup
@@ -178,7 +179,7 @@ cd evalution/lm-evaluation-harness
 pip install -e .
 ```
 
-##### Step2: Replace data-path with tkeval
+##### Step2: Replace data-path with TKEval
 ```shell
 download_dir="./data/"
 ngram=3 # [2, 3, 5]
@@ -204,7 +205,7 @@ cd evalution/bigcode-evaluation-harness
 pip install -e .
 ```
 
-##### Step2: Replace data-path with tkeval
+##### Step2: Replace data-path with TKEval
 ```shell
 download_dir="./data/"
 ngram=3 # [2, 3, 5]
@@ -220,7 +221,7 @@ sed -i 's#DATASET_PATH =.*#DATASET_PATH = "'${download_dir}'/data.'${scramble_ty
 ##### Step3: Run Evalution
 Same as [char-level evaluation](#step3-run-evaluation-1).
 
-## BPE-Dropout fine-tuning
+## [BPE-Dropout](https://aclanthology.org/2020.acl-main.170/) fine-tuning
 * [Training data](https://huggingface.co/datasets/FloatAI/TKEval/tree/main/token_structure_probing/train) we use for fine-tuning are designed for "Token Structure Probing". 
 * How to perform BPE-Dropout
   ```python
@@ -233,7 +234,7 @@ Same as [char-level evaluation](#step3-run-evaluation-1).
   ```
 
 ## Citation
-```
+```bibtex
 @inproceedings{chai2024tokenization,
   title={Tokenization Falling Short: On Subword Robustness in Large Language Models},
   author={Chai, Yekun and Fang, Yewei and Peng, Qiwei and Li, Xuhong},
