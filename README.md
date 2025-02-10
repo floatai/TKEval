@@ -234,11 +234,23 @@ Same as [char-level evaluation](#step3-run-evaluation-1).
 
 ## Citation
 ```bibtex
-@inproceedings{chai2024tokenization,
-  title={Tokenization Falling Short: On Subword Robustness in Large Language Models},
-  author={Chai, Yekun and Fang, Yewei and Peng, Qiwei and Li, Xuhong},
-  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2024},
-  pages={1582--1599},
-  year={2024}
+@inproceedings{chai-etal-2024-tokenization,
+    title = "Tokenization Falling Short: On Subword Robustness in Large Language Models",
+    author = "Chai, Yekun  and
+      Fang, Yewei  and
+      Peng, Qiwei  and
+      Li, Xuhong",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-emnlp.86/",
+    doi = "10.18653/v1/2024.findings-emnlp.86",
+    pages = "1582--1599",
+    abstract = "Language models typically tokenize raw text into sequences of subword identifiers from a predefined vocabulary, a process inherently sensitive to typographical errors, length variations, and largely oblivious to the internal structure of tokens{---}issues we term *the curse of tokenization*. In this study, we delve into these drawbacks and demonstrate that large language models (LLMs) remain susceptible to these problems. This study systematically investigates these challenges and their impact on LLMs through three critical research questions: (1) complex problem solving, (2) token structure probing, and (3) resilience to typographical variation. Our findings reveal that scaling model parameters can mitigate the issue of tokenization; however, LLMs still suffer from biases induced by typos and other text format variations. Our experiments show that subword regularization such as BPE-dropout can mitigate this issue. We release our evaluation code and data at https://github.com/FloatAI/TKEval."
 }
 ```
