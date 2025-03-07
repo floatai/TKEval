@@ -1,6 +1,6 @@
 # [EMNLP'24 Findings | Tokenization Falling Short: On Subword Robustness in Large Language Models](https://aclanthology.org/2024.findings-emnlp.86/)
 
-   <a href="https://huggingface.co/datasets/FloatAI/TKEval" target="_blank">
+   <a href="https://huggingface.co/datasets/floatai/TKEval" target="_blank">
       <img alt="Datasets" src="https://img.shields.io/badge/📚-Dataset-orange" />
    </a> 
    <a href="https://arxiv.org/abs/2406.11687" target="_blank"><img alt="Paper" src="https://img.shields.io/badge/📜-Paper-purple" /></a>
@@ -11,7 +11,7 @@ The official repository which contains the code and model checkpoints for our pa
 
 
 ## 🔥 News
-* **11 December, 2024:** 🚀 We release [TKEval dataset](https://huggingface.co/datasets/FloatAI/TKEval) and evalution code.
+* **11 December, 2024:** 🚀 We release [TKEval dataset](https://huggingface.co/datasets/floatai/TKEval) and evalution code.
 * **21 September, 2024:** 🎉 Our work has been accepted to [EMNLP 2024 (Findings)](https://2024.emnlp.org/)! ⭐
 
 ## Contents
@@ -29,7 +29,7 @@ The official repository which contains the code and model checkpoints for our pa
   mkdir ${download_dir}
   cd ${download_dir}
   git lfs install
-  git clone https://huggingface.co/datasets/FloatAI/TKEval
+  git clone https://huggingface.co/datasets/floatai/TKEval
   cd -
 
   # replace archive.tar address in mmlu_no_train.py
@@ -251,6 +251,6 @@ Same as [char-level evaluation](#step3-run-evaluation-1).
     url = "https://aclanthology.org/2024.findings-emnlp.86/",
     doi = "10.18653/v1/2024.findings-emnlp.86",
     pages = "1582--1599",
-    abstract = "Language models typically tokenize raw text into sequences of subword identifiers from a predefined vocabulary, a process inherently sensitive to typographical errors, length variations, and largely oblivious to the internal structure of tokens{---}issues we term *the curse of tokenization*. In this study, we delve into these drawbacks and demonstrate that large language models (LLMs) remain susceptible to these problems. This study systematically investigates these challenges and their impact on LLMs through three critical research questions: (1) complex problem solving, (2) token structure probing, and (3) resilience to typographical variation. Our findings reveal that scaling model parameters can mitigate the issue of tokenization; however, LLMs still suffer from biases induced by typos and other text format variations. Our experiments show that subword regularization such as BPE-dropout can mitigate this issue. We release our evaluation code and data at https://github.com/FloatAI/TKEval."
+    abstract = "Language models typically tokenize raw text into sequences of subword identifiers from a predefined vocabulary, a process inherently sensitive to typographical errors, length variations, and largely oblivious to the internal structure of tokens{---}issues we term *the curse of tokenization*. In this study, we delve into these drawbacks and demonstrate that large language models (LLMs) remain susceptible to these problems. This study systematically investigates these challenges and their impact on LLMs through three critical research questions: (1) complex problem solving, (2) token structure probing, and (3) resilience to typographical variation. Our findings reveal that scaling model parameters can mitigate the issue of tokenization; however, LLMs still suffer from biases induced by typos and other text format variations. Our experiments show that subword regularization such as BPE-dropout can mitigate this issue. We release our evaluation code and data at https://github.com/floatai/TKEval."
 }
 ```
