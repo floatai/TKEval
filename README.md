@@ -25,7 +25,7 @@ The official repository which contains the code and model checkpoints for our pa
 
 ## Data Preparation
   ```shell
-  download_dir=./data/
+  download_dir=./data/TKEval
   mkdir ${download_dir}
   cd ${download_dir}
   git lfs install
